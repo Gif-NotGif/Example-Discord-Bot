@@ -49,13 +49,10 @@ Follow the official Discord documentation to create a bot and get your token:
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
 2. Click "New Application" and give it a name
 3. Go to the "Bot" section in the left sidebar
-4. Click "Add Bot" and confirm
-5. Under the TOKEN section, click "Reset Token" and copy your bot token
-6. **Important:** Keep this token secret!
+4. Under the TOKEN section, click "Reset Token" and copy your bot token
 
-**Bot Permissions:**
-- Under the "Bot" section, enable the following **Privileged Gateway Intents** if needed (not required for this simple bot)
-- For this bot, default intents are sufficient
+> [!WARNING]
+> Important: Keep this token secret!
 
 **Inviting the Bot to Your Server:**
 1. Go to the "OAuth2" > "URL Generator" section
@@ -90,6 +87,9 @@ DISCORD_TOKEN=your_actual_token_here
 python bot.py
 ```
 
+> [!TIP]
+> This will only run the bot locally. If you close the process running the bot or shut down your computer, then the bot will go offline. If you want the bot to be up 100% of the time, consider hosting the bot on a server.
+
 You should see output indicating the bot has logged in successfully.
 
 ## Usage
@@ -103,9 +103,3 @@ When you're done working with the bot, deactivate the virtual environment:
 ```bash
 deactivate
 ```
-
-## Troubleshooting
-
-- **Bot doesn't respond to commands:** Make sure you've invited the bot with `applications.commands` scope
-- **Token errors:** Verify your token in the `.env` file is correct and has no extra spaces
-- **Import errors:** Make sure you've activated the virtual environment and installed dependencies
